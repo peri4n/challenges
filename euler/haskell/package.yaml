@@ -37,6 +37,11 @@ executables:
     source-dirs:         problems/problem2
     dependencies:
     - haskell-euler
+  problem3:
+    main:                Main.hs
+    source-dirs:         problems/problem3
+    dependencies:
+    - haskell-euler
 
 tests:
   haskell-euler-test:

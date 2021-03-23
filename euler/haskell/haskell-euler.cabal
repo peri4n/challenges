@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c695074824675594b9459ad83c8b46a398570b0c2c9d4df9f3cdf0ef4a61da53
+-- hash: 1f93ee22c7a3524fde0e9aad6efcdd88ef1f0a76e218b88f6c0806126f5e3ac2
 
 name:           haskell-euler
 version:        0.1.0.0
@@ -29,6 +29,7 @@ source-repository head
 library
   exposed-modules:
       Numbers.Fibonacci
+      Numbers.Primes
   other-modules:
       Paths_haskell_euler
   hs-source-dirs:
@@ -56,6 +57,18 @@ executable problem2
       Paths_haskell_euler
   hs-source-dirs:
       problems/problem2
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-euler
+  default-language: Haskell2010
+
+executable problem3
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_euler
+  hs-source-dirs:
+      problems/problem3
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
