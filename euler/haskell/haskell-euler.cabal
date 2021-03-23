@@ -1,0 +1,76 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c695074824675594b9459ad83c8b46a398570b0c2c9d4df9f3cdf0ef4a61da53
+
+name:           haskell-euler
+version:        0.1.0.0
+synopsis:       Project Euler solutions
+description:    Please see the README on GitHub at <https://github.com/peri4n/haskell-euler#readme>
+category:       code-challenge
+homepage:       https://github.com/peri4n/haskell-euler#readme
+bug-reports:    https://github.com/peri4n/haskell-euler/issues
+author:         Fabian Bull
+maintainer:     bull.fabian@googlemail.com
+copyright:      GPG
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/peri4n/haskell-euler
+
+library
+  exposed-modules:
+      Numbers.Fibonacci
+  other-modules:
+      Paths_haskell_euler
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable problem1
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_euler
+  hs-source-dirs:
+      problems/problem1
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-euler
+  default-language: Haskell2010
+
+executable problem2
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_euler
+  hs-source-dirs:
+      problems/problem2
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-euler
+  default-language: Haskell2010
+
+test-suite haskell-euler-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_euler
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-euler
+  default-language: Haskell2010

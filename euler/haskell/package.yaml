@@ -1,0 +1,46 @@
+name:                haskell-euler
+version:             0.1.0.0
+github:              "peri4n/haskell-euler"
+license:             BSD3
+author:              "Fabian Bull"
+maintainer:          "bull.fabian@googlemail.com"
+copyright:           "GPG"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+synopsis:            Project Euler solutions
+category:            code-challenge
+
+description:         Please see the README on GitHub at <https://github.com/peri4n/haskell-euler#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+ghc-options:
+- -threaded
+- -rtsopts
+- -with-rtsopts=-N
+
+executables:
+  problem1:
+    main:                Main.hs
+    source-dirs:         problems/problem1
+    dependencies:
+    - haskell-euler
+  problem2:
+    main:                Main.hs
+    source-dirs:         problems/problem2
+    dependencies:
+    - haskell-euler
+
+tests:
+  haskell-euler-test:
+    main:                Spec.hs
+    source-dirs:         test
+    dependencies:
+    - haskell-euler
