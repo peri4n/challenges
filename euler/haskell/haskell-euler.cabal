@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1f93ee22c7a3524fde0e9aad6efcdd88ef1f0a76e218b88f6c0806126f5e3ac2
+-- hash: c55174bee7e8937f1dd0f3b21c36c82e49a1dfbe02345a41dd1f17a82f6ea088
 
 name:           haskell-euler
 version:        0.1.0.0
@@ -69,6 +69,18 @@ executable problem3
       Paths_haskell_euler
   hs-source-dirs:
       problems/problem3
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-euler
+  default-language: Haskell2010
+
+executable problem4
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_euler
+  hs-source-dirs:
+      problems/problem4
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
