@@ -11,13 +11,27 @@ For each problem there is an executable that prints the solution to your termina
 To run the solution to problem 1 run:
 
 ```
-stack exec problem1
+stack run problem1
 ```
 
 To run the solution to problem 2 run:
 
 ```
-stack exec problem2
+stack run problem2
 ```
 
 I hope you get the idea.
+
+## Building the project
+
+To build the entire project run:
+
+```
+stack build
+```
+
+Afterwards you can use the build executables with:
+
+```
+stack exec problem11
+```
