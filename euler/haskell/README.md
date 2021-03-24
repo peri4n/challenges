@@ -11,13 +11,13 @@ For each problem there is an executable that prints the solution to your termina
 To run the solution to problem 1 run:
 
 ```
-stack run problem1
+stack exec problem1
 ```
 
 To run the solution to problem 2 run:
 
 ```
-stack run problem2
+stack exec problem2
 ```
 
 I hope you get the idea.

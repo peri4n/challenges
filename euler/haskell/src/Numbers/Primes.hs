@@ -1,6 +1,7 @@
 module Numbers.Primes
         ( primeFactors
         , isPrime
+        , primes
         ) where
 
 import Data.List
@@ -11,10 +12,13 @@ primeFactors x = primeFactors' x []
 
 primeFactors' :: Int -> [Int] -> [Int]
 primeFactors' x acc =
-        let divisor = find (\i -> mod x i == 0) [2..x]
+        let divisor = find (\i -> x `divides` i) [2..x]
          in case divisor of
           Just d -> primeFactors' (quot x d) (d:acc)
           Nothing -> acc
 
 isPrime :: Int -> Bool
 isPrime x = not $ any (divides x) [2,3..(floor $ sqrt (fromIntegral x))]
+
+primes :: [Int]
+primes = filter isPrime (2:[3,5..])
