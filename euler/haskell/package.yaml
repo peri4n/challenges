@@ -99,6 +99,12 @@ executables:
     source-dirs:         problems/problem12
     dependencies:
     - haskell-euler
+  problem13:
+    main:                Main.hs
+    other-modules:       []
+    source-dirs:         problems/problem13
+    dependencies:
+    - haskell-euler
 
 tests:
   haskell-euler-test:
