@@ -2,6 +2,7 @@ module Numbers.Primes
         ( primeFactors
         , isPrime
         , primes
+        , nDivisors
         ) where
 
 import Data.List
@@ -22,3 +23,7 @@ isPrime x = not $ any (divides x) [2,3..(floor $ sqrt (fromIntegral x))]
 
 primes :: [Int]
 primes = filter isPrime (2:[3,5..])
+
+nDivisors :: Int -> Int
+nDivisors n = product $ map ((+1) . length) (group (primeFactors n))
+
