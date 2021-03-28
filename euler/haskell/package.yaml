@@ -117,6 +117,18 @@ executables:
     source-dirs:         problems/problem15
     dependencies:
     - haskell-euler
+  problem16:
+    main:                Main.hs
+    other-modules:       []
+    source-dirs:         problems/problem16
+    dependencies:
+    - haskell-euler
+  problem18:
+    main:                Main.hs
+    other-modules:       []
+    source-dirs:         problems/problem18
+    dependencies:
+    - haskell-euler
 
 tests:
   haskell-euler-test:
