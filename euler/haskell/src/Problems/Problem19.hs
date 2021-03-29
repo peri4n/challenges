@@ -1,3 +1,4 @@
+module Problems.Problem19 where
 
 type Date = (Int, Int, Int)
 
@@ -31,10 +32,11 @@ next d@(day, month, year)
   | month == 2 && day == 29 = nextMonth d
   | month == 2 = nextDay d
 
-main = do
+solution :: Int
+solution =
     let
       allDates = takeWhile (/= (1, 1, 2001)) $ iterate next (1, 1, 1900)
       dotw = cycle [1..7]
       both = zip dotw allDates
-    print ((length . filter (\(dw, (d, m, y)) -> 1901 <= y && y <= 2000 && d == 1 && dw == 7)) both)
+    in (length . filter (\(dw, (d, m, y)) -> 1901 <= y && y <= 2000 && d == 1 && dw == 7)) both
 

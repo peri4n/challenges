@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8c45d04566934da1cd5f15cf67c90edde63e004719df59593daa10dcb9ae6275
+-- hash: 6b552ce1b4895477d755b1a84d461cbcb22f600028dc3960bf3b483c673df097
 
 name:           haskell-euler
 version:        0.1.0.0
@@ -32,189 +32,37 @@ library
       Numbers.Fibonacci
       Numbers.Primes
       Numbers.Series
+      Problems.Problem1
+      Problems.Problem10
+      Problems.Problem11
+      Problems.Problem12
+      Problems.Problem13
+      Problems.Problem14
+      Problems.Problem15
+      Problems.Problem16
+      Problems.Problem17
+      Problems.Problem18
+      Problems.Problem19
+      Problems.Problem2
+      Problems.Problem3
+      Problems.Problem4
+      Problems.Problem5
+      Problems.Problem6
+      Problems.Problem7
+      Problems.Problem8
+      Problems.Problem9
   other-modules:
       Paths_haskell_euler
   hs-source-dirs:
       src
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable problem1
+executable euler-exe
   main-is: Main.hs
   hs-source-dirs:
-      problems/problem1
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem10
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem10
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem11
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem11
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem12
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem12
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem13
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem13
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem14
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem14
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem15
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem15
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem16
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem16
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem18
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem18
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem19
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem19
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem2
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem2
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem3
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem3
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem4
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem4
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem5
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem5
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem6
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem6
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem7
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem7
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem8
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem8
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-euler
-  default-language: Haskell2010
-
-executable problem9
-  main-is: Main.hs
-  hs-source-dirs:
-      problems/problem9
+      app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
@@ -228,8 +76,8 @@ test-suite haskell-euler-test
       Paths_haskell_euler
   hs-source-dirs:
       test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      HUnit
+    , base >=4.7 && <5
     , haskell-euler
   default-language: Haskell2010

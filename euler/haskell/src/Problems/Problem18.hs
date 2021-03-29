@@ -1,6 +1,7 @@
-main :: IO ()
-main = do
-    putStrLn $ show $ head $ foldr1 g tri
+module Problems.Problem18 where
+
+solution :: Int
+solution = head $ foldr1 g tri
   where
     f x y z = x + max y z
     g xs ys = zipWith3 f xs ys $ tail ys

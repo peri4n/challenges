@@ -21,120 +21,17 @@ dependencies:
 library:
   source-dirs: src
 
-ghc-options:
-- -threaded
-- -rtsopts
-- -with-rtsopts=-N
-
 executables:
-  problem1:
+  euler-exe:
     main:                Main.hs
     other-modules:       []
-    source-dirs:         problems/problem1
+    source-dirs:         app
     dependencies:
     - haskell-euler
-  problem2:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem2
-    dependencies:
-    - haskell-euler
-  problem3:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem3
-    dependencies:
-    - haskell-euler
-  problem4:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem4
-    dependencies:
-    - haskell-euler
-  problem5:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem5
-    dependencies:
-    - haskell-euler
-  problem6:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem6
-    dependencies:
-    - haskell-euler
-  problem7:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem7
-    dependencies:
-    - haskell-euler
-  problem8:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem8
-    dependencies:
-    - haskell-euler
-  problem9:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem9
-    dependencies:
-    - haskell-euler
-  problem10:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem10
-    dependencies:
-    - haskell-euler
-  problem11:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem11
-    dependencies:
-    - haskell-euler
-  problem12:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem12
-    dependencies:
-    - haskell-euler
-  problem13:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem13
-    dependencies:
-    - haskell-euler
-  problem14:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem14
-    dependencies:
-    - haskell-euler
-  problem15:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem15
-    dependencies:
-    - haskell-euler
-  problem16:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem16
-    dependencies:
-    - haskell-euler
-  problem18:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem18
-    dependencies:
-    - haskell-euler
-  problem19:
-    main:                Main.hs
-    other-modules:       []
-    source-dirs:         problems/problem19
-    dependencies:
-    - haskell-euler
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
 
 tests:
   haskell-euler-test:
@@ -142,3 +39,4 @@ tests:
     source-dirs:         test
     dependencies:
     - haskell-euler
+    - HUnit

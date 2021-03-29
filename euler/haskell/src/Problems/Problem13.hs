@@ -1,7 +1,9 @@
+module Problems.Problem13 where
+
 -- Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 
-main :: IO ()
-main = putStrLn $ take 10 $ show $ sum numbers
+solution :: Int
+solution = read $ take 10 $ show $ sum numbers
 
 numbers :: [Integer]
 numbers = [37107287533902102798797998220837590246510135740250,

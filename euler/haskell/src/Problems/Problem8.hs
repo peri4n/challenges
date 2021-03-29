@@ -1,10 +1,12 @@
+module Problems.Problem8 where
+
 import Data.Char
 
 -- The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 -- Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-main :: IO ()
-main = print (maximum $ map product (sliding 13 text))
+solution :: Int
+solution = maximum $ map product (sliding 13 text)
 
 text :: [Int]
 text = map digitToInt "73167176531330624919225119674426574742355349194934\
@@ -31,7 +33,7 @@ text = map digitToInt "73167176531330624919225119674426574742355349194934\
 sliding :: Int -> [a] -> [[a]]
 sliding 0 xs = [xs]
 sliding s [] = []
-sliding s xs 
+sliding s xs
     | length xs < s = []
     | otherwise = (take s xs) : (sliding s (tail xs))
 
