@@ -22,3 +22,12 @@ stack run -- 2
 
 I hope you get the idea.
 
+## Profiling a problem
+
+To generate a profiling file run:
+
+```
+stack exec --profile -- euler-exe 14 +RTS -p
+```
+
+You can analyze the generated `euler-exe.prof` with the usual tools.
