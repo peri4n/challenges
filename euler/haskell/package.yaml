@@ -30,6 +30,7 @@ executables:
     - haskell-euler
     ghc-options:
     - -threaded
+    - -O2
     - -rtsopts
     - -with-rtsopts=-N
 

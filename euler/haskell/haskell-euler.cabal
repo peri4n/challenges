@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6b552ce1b4895477d755b1a84d461cbcb22f600028dc3960bf3b483c673df097
+-- hash: 06105b3185b969075990f258ea9b43807e4a8b7494b4699ad699a0dd3971d371
 
 name:           haskell-euler
 version:        0.1.0.0
@@ -63,7 +63,7 @@ executable euler-exe
   main-is: Main.hs
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -O2 -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , haskell-euler
