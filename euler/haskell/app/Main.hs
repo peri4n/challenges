@@ -20,6 +20,7 @@ import Problems.Problem16 as P16
 import Problems.Problem17 as P17
 import Problems.Problem18 as P18
 import Problems.Problem19 as P19
+import Problems.Problem23 as P23
 import Problems.Problem87 as P87
 
 main = do
@@ -44,6 +45,7 @@ main = do
               "17" -> P17.solution
               "18" -> P18.solution
               "19" -> P19.solution
+              "23" -> P23.solution
               "87" -> P87.solution
               _ -> 0
   if solution == 0 then putStrLn $ "I have now solution Euler problem " ++ head p else print solution

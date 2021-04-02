@@ -2,7 +2,10 @@ module Numbers.Series
         ( collatz
         , triplets
         , pyTriplets
+        , abundant
         ) where
+
+import Numbers.Core
 
 collatz :: Int -> Int
 collatz n
@@ -18,3 +21,9 @@ isPythagoraen (a,b,c) = (a*a) + (b*b) == (c*c)
 
 pyTriplets :: [(Int, Int, Int)]
 pyTriplets = filter isPythagoraen triplets
+
+isAbundant :: Int -> Bool
+isAbundant n = n < (sum (divisors n) - n)
+
+abundant :: [Int]
+abundant = filter isAbundant [12..]
