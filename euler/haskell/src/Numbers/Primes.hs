@@ -23,7 +23,9 @@ primeFactors' x acc =
         Nothing -> acc
 
 isPrime :: Int -> Bool
-isPrime x = not $ any (divides x) [2,3..(floor $ sqrt (fromIntegral x))]
+isPrime x 
+  | x <= 1 = False
+  | otherwise = not $ any (divides x) [2,3..(floor $ sqrt (fromIntegral x))]
 
 primes :: [Int]
 primes = filter isPrime (2:[3,5..])

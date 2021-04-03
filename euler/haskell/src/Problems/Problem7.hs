@@ -6,4 +6,4 @@ import Numbers.Primes
 -- What is the 10001st prime number?
 --
 solution :: Int
-solution = (filter isPrime [1..]) !! 10001
+solution = filter isPrime [1..] !! 10000
