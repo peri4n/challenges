@@ -7,5 +7,3 @@ powerset :: [a] -> [[a]]
 powerset [] = [[]]
 powerset (x:xs) = map (x:) (powerset xs) ++ powerset xs
 
-divisors :: Int -> [Int]
-divisors n = filter (divides n) [1..n]

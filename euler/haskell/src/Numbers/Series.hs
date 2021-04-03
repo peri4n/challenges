@@ -5,6 +5,7 @@ module Numbers.Series
         , abundant
         ) where
 
+import Numbers.Primes (divisors)
 import Numbers.Core
 
 collatz :: Int -> Int
