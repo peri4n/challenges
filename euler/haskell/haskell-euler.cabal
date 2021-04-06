@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c7571f3e99bf30c8b28f69bcde40c71e54d9f021ec7c2265a0a03eb05da09cfb
+-- hash: c109682a8633ecef1a0b2111daae489d6c8420500a8282fe51cb4bea59b7590a
 
 name:           haskell-euler
 version:        0.1.0.0
@@ -48,6 +48,7 @@ library
       Problems.Problem23
       Problems.Problem27
       Problems.Problem3
+      Problems.Problem32
       Problems.Problem4
       Problems.Problem5
       Problems.Problem6
