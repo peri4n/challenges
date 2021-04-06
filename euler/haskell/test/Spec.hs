@@ -21,6 +21,7 @@ import Problems.Problem22 as P22
 import Problems.Problem23 as P23
 import Problems.Problem27 as P27
 import Problems.Problem32 as P32
+import Problems.Problem35 as P35
 import Problems.Problem87 as P87
 
 problem1 = TestCase (assertEqual "Solution to problem 1" P1.solution 233168)
@@ -67,6 +68,8 @@ problem27 = TestCase (assertEqual "Solution to problem 27" P27.solution (-59231)
 
 problem32 = TestCase (assertEqual "Solution to problem 32" P32.solution 45228)
 
+problem35 = TestCase (assertEqual "Solution to problem 35" P35.solution 55)
+
 problem87 = TestCase (assertEqual "Solution to problem 87" P87.solution 1097343)
 
 main :: IO ()
@@ -92,6 +95,7 @@ main = runTestTTAndExit $ TestList [ problem1
                                    , problem23
                                    , problem27
                                    , problem32
+                                   , problem35
                                    , problem87
                                    ]
 
