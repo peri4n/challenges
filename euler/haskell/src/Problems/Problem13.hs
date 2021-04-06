@@ -2,6 +2,9 @@ module Problems.Problem13 where
 
 -- Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 
+solve :: IO Int
+solve = return solution
+
 solution :: Int
 solution = read $ take 10 $ show $ sum numbers
 

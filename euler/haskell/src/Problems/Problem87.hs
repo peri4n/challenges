@@ -4,6 +4,9 @@ import Numbers.Primes
 import Data.Set as S
 import Data.List as L
 
+solve :: IO Int
+solve = return solution
+
 solution :: Int
 solution = size $ S.fromList [s + c + q | s <- squares, c <- cubes, q <- quads, s + c + q < 50000000]
 

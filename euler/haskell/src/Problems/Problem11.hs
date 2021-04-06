@@ -61,3 +61,5 @@ prod = product . map access
 solution :: Int
 solution = maximum $ map prod (horizontal ++ vertical ++ tlbr ++ trbl)
 
+solve :: IO Int
+solve = return solution

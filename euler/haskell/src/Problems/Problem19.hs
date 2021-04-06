@@ -40,3 +40,5 @@ solution =
       both = zip dotw allDates
     in (length . filter (\(dw, (d, m, y)) -> 1901 <= y && y <= 2000 && d == 1 && dw == 7)) both
 
+solve :: IO Int
+solve = return solution

@@ -4,6 +4,9 @@ import Data.Set as S
 import Data.List as L
 import Numbers.Series
 
+solve :: IO Int
+solve = return solution
+
 solution :: Int
 solution = L.sum $ L.filter (`notMember` abundantSums) [1..28123]
 

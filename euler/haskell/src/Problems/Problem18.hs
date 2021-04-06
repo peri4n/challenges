@@ -1,5 +1,8 @@
 module Problems.Problem18 where
 
+solve :: IO Int
+solve = return solution
+
 solution :: Int
 solution = head $ foldr1 g tri
   where

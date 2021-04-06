@@ -7,6 +7,9 @@ import Numbers.Primes
 -- The first ten terms would be: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...
 -- What is the value of the first triangle number to have over five hundred divisors?
 
+solve :: IO Int
+solve = return solution
+
 solution :: Int
 solution = head $ filter ((> 500) . nDivisors) triangleNumbers
   where triangleNumbers = scanl1 (+) [1..]

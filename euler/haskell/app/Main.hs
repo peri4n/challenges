@@ -20,34 +20,36 @@ import Problems.Problem16 as P16
 import Problems.Problem17 as P17
 import Problems.Problem18 as P18
 import Problems.Problem19 as P19
+import Problems.Problem22 as P22
 import Problems.Problem23 as P23
 import Problems.Problem27 as P27
 import Problems.Problem87 as P87
 
 main = do
   p <- getArgs
-  let solution = case head p of
-              "1" -> P1.solution
-              "2" -> P2.solution
-              "3" -> P3.solution
-              "4" -> P4.solution
-              "5" -> P5.solution
-              "6" -> P6.solution
-              "7" -> P7.solution
-              "8" -> P8.solution
-              "9" -> P9.solution
-              "10" -> P10.solution
-              "11" -> P11.solution
-              "12" -> P12.solution
-              "13" -> P13.solution
-              "14" -> P14.solution
-              "15" -> P15.solution
-              "16" -> P16.solution
-              "17" -> P17.solution
-              "18" -> P18.solution
-              "19" -> P19.solution
-              "23" -> P23.solution
-              "27" -> P27.solution
-              "87" -> P87.solution
-              _ -> 0
+  solution <- case head p of
+              "1" -> P1.solve
+              "2" -> P2.solve
+              "3" -> P3.solve
+              "4" -> P4.solve
+              "5" -> P5.solve
+              "6" -> P6.solve
+              "7" -> P7.solve
+              "8" -> P8.solve
+              "9" -> P9.solve
+              "10" -> P10.solve
+              "11" -> P11.solve
+              "12" -> P12.solve
+              "13" -> P13.solve
+              "14" -> P14.solve
+              "15" -> P15.solve
+              "16" -> P16.solve
+              "17" -> P17.solve
+              "18" -> P18.solve
+              "19" -> P19.solve
+              "22" -> P22.solve
+              "23" -> P23.solve
+              "27" -> P27.solve
+              "87" -> P87.solve
+              _ -> return 0
   if solution == 0 then putStrLn $ "I have now solution Euler problem " ++ head p else print solution

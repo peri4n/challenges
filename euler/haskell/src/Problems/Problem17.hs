@@ -1,5 +1,8 @@
 module Problems.Problem17 where
 
+solve :: IO Int
+solve = return solution
+
 solution :: Int
 solution = 11 + sum (map letterCount [1..999])
 

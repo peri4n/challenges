@@ -4,6 +4,9 @@ import Data.Foldable (maximumBy)
 import Data.Ord (comparing)
 import Numbers.Primes
 
+solve :: IO Int
+solve = return solution
+
 solution :: Int
 solution = p
   where
