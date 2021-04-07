@@ -23,6 +23,7 @@ import Problems.Problem19 as P19
 import Problems.Problem22 as P22
 import Problems.Problem23 as P23
 import Problems.Problem27 as P27
+import Problems.Problem31 as P31
 import Problems.Problem32 as P32
 import Problems.Problem35 as P35
 import Problems.Problem50 as P50
@@ -53,6 +54,7 @@ main = do
               "22" -> P22.solve
               "23" -> P23.solve
               "27" -> P27.solve
+              "31" -> P31.solve
               "32" -> P32.solve
               "35" -> P35.solve
               "50" -> P50.solve
