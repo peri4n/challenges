@@ -23,6 +23,7 @@ import Problems.Problem27 as P27
 import Problems.Problem32 as P32
 import Problems.Problem35 as P35
 import Problems.Problem36 as P36
+import Problems.Problem37 as P37
 import Problems.Problem50 as P50
 import Problems.Problem87 as P87
 
@@ -72,7 +73,9 @@ problem32 = TestCase (assertEqual "Solution to problem 32" P32.solution 45228)
 
 problem35 = TestCase (assertEqual "Solution to problem 35" P35.solution 55)
 
-problem36 = TestCase (assertEqual "Solution to problem 35" P36.solution 872187)
+problem36 = TestCase (assertEqual "Solution to problem 36" P36.solution 872187)
+
+problem37 = TestCase (assertEqual "Solution to problem 37" P37.solution 748317)
 
 problem50 = TestCase (assertEqual "Solution to problem 50" P50.solution 997651)
 
