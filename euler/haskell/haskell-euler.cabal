@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3a70a59946bcdff0e51196c97ef6891c1d2e9efa3785bd796b60a6001b2cb9f1
+-- hash: 796c7edd76f1a2aa69c12f3266a37730819ed7b62211ac0d7a27a018055a9abe
 
 name:           haskell-euler
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 
 library
   exposed-modules:
+      Numbers.Combinatorics
       Numbers.Core
       Numbers.Fibonacci
       Numbers.Primes
@@ -54,6 +55,7 @@ library
       Problems.Problem36
       Problems.Problem37
       Problems.Problem4
+      Problems.Problem41
       Problems.Problem42
       Problems.Problem5
       Problems.Problem50

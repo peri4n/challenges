@@ -24,6 +24,8 @@ import Problems.Problem32 as P32
 import Problems.Problem35 as P35
 import Problems.Problem36 as P36
 import Problems.Problem37 as P37
+import Problems.Problem41 as P41
+import Problems.Problem42 as P42
 import Problems.Problem50 as P50
 import Problems.Problem87 as P87
 
@@ -77,6 +79,10 @@ problem36 = TestCase (assertEqual "Solution to problem 36" P36.solution 872187)
 
 problem37 = TestCase (assertEqual "Solution to problem 37" P37.solution 748317)
 
+problem41 = TestCase (assertEqual "Solution to problem 41" P41.solution 7652413)
+
+problem42 = TestCase (P42.solve >>= assertEqual "Solution to problem 42" 162)
+
 problem50 = TestCase (assertEqual "Solution to problem 50" P50.solution 997651)
 
 problem87 = TestCase (assertEqual "Solution to problem 87" P87.solution 1097343)
@@ -106,6 +112,8 @@ main = runTestTTAndExit $ TestList [ problem1
                                    , problem32
                                    , problem35
                                    , problem36
+                                   , problem41
+                                   , problem42
                                    , problem50
                                    , problem87
                                    ]
