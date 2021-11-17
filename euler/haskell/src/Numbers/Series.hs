@@ -3,6 +3,7 @@ module Numbers.Series
         , triplets
         , pyTriplets
         , abundant
+        , triangles
         ) where
 
 import Numbers.Primes (divisors)
@@ -28,3 +29,6 @@ isAbundant n = n < (sum (divisors n) - n)
 
 abundant :: [Int]
 abundant = filter isAbundant [12..]
+
+triangles :: [Int]
+triangles = map (\n -> n * (n + 1) `div` 2) [1..]
