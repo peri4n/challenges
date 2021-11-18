@@ -1,13 +1,16 @@
-module Numbers.Series 
+module Numbers.Series
         ( collatz
         , triplets
         , pyTriplets
         , abundant
         , triangles
+        , pandigital
+        , pandigital1
         ) where
 
 import Numbers.Primes (divisors)
 import Numbers.Core
+import Numbers.Combinatorics (permute)
 
 collatz :: Int -> Int
 collatz n
@@ -32,3 +35,13 @@ abundant = filter isAbundant [12..]
 
 triangles :: [Int]
 triangles = map (\n -> n * (n + 1) `div` 2) [1..]
+
+fromDigits :: [Int] -> Int
+fromDigits = foldl addDigit 0
+   where addDigit num d = 10*num + d
+
+pandigital :: Int -> [Int]
+pandigital n = filter (> 10^n) $  map fromDigits (permute [0..n])
+
+pandigital1 :: Int -> [Int]
+pandigital1 n = map fromDigits (permute [1..n])
