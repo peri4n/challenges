@@ -1,8 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.5.
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: 84c2182fbe6ce72281e7bf46aa120fa91bf2eca141f92f610590a41bebb21023
 
 name:           aoc
 version:        0.1.0.0
@@ -26,7 +28,6 @@ source-repository head
 library
   exposed-modules:
       AdventOfCode.Day1
-      Lib
   other-modules:
       Paths_aoc
   hs-source-dirs:
@@ -56,6 +57,7 @@ test-suite aoc-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      aoc
+      HUnit
+    , aoc
     , base >=4.7 && <5
   default-language: Haskell2010
