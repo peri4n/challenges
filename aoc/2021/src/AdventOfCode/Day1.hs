@@ -23,9 +23,7 @@ solveA :: IO Int
 solveA = numbers <&> incDec
 
 solveB :: IO Int
-solveB = numbers <&> (incDec . slideSum 3) 
+solveB = numbers <&> (incDec . slideSum 3)
 
 incDec :: (Integral a) => [a] -> Int
-incDec ws = count (>0) $ zipWith (-) (tail ws) ws
-
-
+incDec ws = count (> 0) $ zipWith (-) (tail ws) ws
