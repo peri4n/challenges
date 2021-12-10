@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 64452b34f862eeda8c94bb07b85fcd831ee936ebca96a689c247c22085b286e1
+-- hash: a59631a0bdc0cacd069893a32a9bfee0e45cadbfbd0007c2ed2851bf4dc24e45
 
 name:           aoc
 version:        0.1.0.0
@@ -31,6 +31,7 @@ library
       AdventOfCode.Day2
       AdventOfCode.Day3
       AdventOfCode.Day4
+      AdventOfCode.Day5
   other-modules:
       Paths_aoc
   hs-source-dirs:
@@ -38,6 +39,7 @@ library
   build-depends:
       base >=4.7 && <5
     , containers
+    , regex-applicative
     , split
   default-language: Haskell2010
 
@@ -52,6 +54,7 @@ executable aoc-exe
       aoc
     , base >=4.7 && <5
     , containers
+    , regex-applicative
     , split
   default-language: Haskell2010
 
@@ -68,5 +71,6 @@ test-suite aoc-test
     , aoc
     , base >=4.7 && <5
     , containers
+    , regex-applicative
     , split
   default-language: Haskell2010
