@@ -7,6 +7,7 @@ import AdventOfCode.Day5 as Day5
 import AdventOfCode.Day6 as Day6
 import AdventOfCode.Day7 as Day7
 import AdventOfCode.Day8 as Day8
+import AdventOfCode.Day9 as Day9
 import Test.HUnit
 
 problem1a = TestCase (Day1.solveA >>= assertEqual "Solution to problem 1a" 1711)
@@ -37,6 +38,8 @@ problem8a = TestCase (Day8.solveA >>= assertEqual "Solution to problem 8a" 367)
 
 problem8b = TestCase (Day8.solveB >>= assertEqual "Solution to problem 8b" 974512)
 
+problem9a = TestCase (Day9.solveA >>= assertEqual "Solution to problem 9a" 594)
+
 solutions :: Test
 solutions =
   TestLabel "Solutions" $
@@ -54,5 +57,6 @@ solutions =
         problem7a,
         problem7b,
         problem8a,
-        problem8b
+        problem8b,
+        problem9a
       ]
