@@ -20,7 +20,8 @@ instance NFData TestSetup
 
 main :: IO ()
 main = do
-  defaultMain
+  defaultMainWith 
+    defaultConfig { csvFile = Just "performance.csv" }
     [ env setups $ \ ~[l1, l2, l3, l4, l5] ->
         bgroup "twoSums"
           [ bgroup

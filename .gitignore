@@ -5,3 +5,6 @@
 
 # Rust
 target/
+
+# Benchmarks
+*.csv
