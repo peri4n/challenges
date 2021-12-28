@@ -8,3 +8,5 @@ This repository contains all programming challenges I did in the past years:
 - [99 Problems](./99problems)
 - [Google Kickstart](./kickstart)
 
+I try to solve every problem in Haskell. If the challenge won't accept Haskell answers, 
+I fallback to Scala, Rust or Python.
