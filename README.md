@@ -10,3 +10,5 @@ This repository contains all programming challenges I did in the past years:
 
 I try to solve every problem in Haskell. If the challenge won't accept Haskell answers, 
 I fallback to Scala, Rust or Python.
+
+I try to emphasize readability over performance.
