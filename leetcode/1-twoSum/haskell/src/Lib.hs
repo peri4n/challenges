@@ -1,19 +1,15 @@
 {-# LANGUAGE TupleSections #-}
 
 module Lib
-  ( someFunc,
-    solution1,
+  ( solution1,
     solution2,
     solution3,
   )
 where
 
+import Data.HashMap.Lazy as M
 import Data.List as L
-import Data.Map as M
 import Data.Maybe (isJust, listToMaybe)
-
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
 
 solution1 :: [Int] -> Int -> Maybe (Int, Int)
 solution1 nums target = listToMaybe $ [(i, j) | (n, i) <- indexedNums, (m, j) <- indexedNums, i /= j, m + n == target]
@@ -36,7 +32,7 @@ toBool _ = False
 solution3 :: [Int] -> Int -> Maybe (Int, Int)
 solution3 nums target = solution3' nums target 0 empty
 
-solution3' :: [Int] -> Int -> Int -> Map Int Int -> Maybe (Int, Int)
+solution3' :: [Int] -> Int -> Int -> HashMap Int Int -> Maybe (Int, Int)
 solution3' (x : xs) target i idx = if isJust complement then (,i) <$> complement else solution3' xs target (i + 1) (M.insert x i idx)
   where
     complement = M.lookup (target - x) idx

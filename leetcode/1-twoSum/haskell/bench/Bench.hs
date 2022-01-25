@@ -11,12 +11,17 @@ import System.Random
 import Control.DeepSeq
 import GHC.Generics (Generic)
 
-data TestSetup = TestSetup
+data TestCase = TestCase
   { nums :: [Int],
     target :: Int
   } deriving Generic
 
+newtype TestSetup = TestSetup
+  { cases :: [TestCase]
+  } deriving Generic
+
 instance NFData TestSetup
+instance NFData TestCase
 
 main :: IO ()
 main = do
@@ -26,37 +31,41 @@ main = do
         bgroup "twoSums"
           [ bgroup
               "Solution 1"
-              [ bench "Solution 1 size 10" $ nf (solution1 (nums l1)) (target l1),
-                bench "Solution 1 size 100" $ nf (solution1 (nums l2)) (target l2),
-                bench "Solution 1 size 1000" $ nf (solution1 (nums l3)) (target l3),
-                bench "Solution 1 size 10000" $ nf (solution1 (nums l4)) (target l4),
-                bench "Solution 1 size 100000" $ nf (solution1 (nums l5)) (target l5)
+              [ bench "10" $ nf (map (\t -> solution1 (nums t) (target t))) (cases l1),
+                bench "100" $ nf (map (\t -> solution1 (nums t) (target t))) (cases l2),
+                bench "1000" $ nf (map (\t -> solution1 (nums t) (target t))) (cases l3),
+                bench "10000" $ nf (map (\t -> solution1 (nums t) (target t))) (cases l4),
+                bench "100000" $ nf (map (\t -> solution1 (nums t) (target t))) (cases l5)
               ],
             bgroup
               "Solution 2"
-              [ bench "Solution 2 size 10" $ nf (solution2 (nums l1)) (target l1),
-                bench "Solution 2 size 100" $ nf (solution2 (nums l2)) (target l2),
-                bench "Solution 2 size 1000" $ nf (solution2 (nums l3)) (target l3),
-                bench "Solution 2 size 10000" $ nf (solution2 (nums l4)) (target l4),
-                bench "Solution 2 size 100000" $ nf (solution2 (nums l5)) (target l5)
+              [ bench "10" $ nf (map (\t -> solution2 (nums t) (target t))) (cases l1),
+                bench "100" $ nf (map (\t -> solution2 (nums t) (target t))) (cases l2),
+                bench "1000" $ nf (map (\t -> solution2 (nums t) (target t))) (cases l3),
+                bench "10000" $ nf (map (\t -> solution2 (nums t) (target t))) (cases l4),
+                bench "100000" $ nf (map (\t -> solution2 (nums t) (target t))) (cases l5)
               ],
             bgroup
               "Solution 3"
-              [ bench "Solution 3 size 10" $ nf (solution3 (nums l1)) (target l1),
-                bench "Solution 3 size 100" $ nf (solution3 (nums l2)) (target l2),
-                bench "Solution 3 size 1000" $ nf (solution3 (nums l3)) (target l3),
-                bench "Solution 3 size 10000" $ nf (solution3 (nums l4)) (target l4),
-                bench "Solution 3 size 100000" $ nf (solution3 (nums l5)) (target l5)
+              [ bench "10" $ nf (map (\t -> solution3 (nums t) (target t))) (cases l1),
+                bench "100" $ nf (map (\t -> solution3 (nums t) (target t))) (cases l2),
+                bench "1000" $ nf (map (\t -> solution3 (nums t) (target t))) (cases l3),
+                bench "10000" $ nf (map (\t -> solution3 (nums t) (target t))) (cases l4),
+                bench "100000" $ nf (map (\t -> solution3 (nums t) (target t))) (cases l5)
               ]
           ]
     ]
 
-setupOfSize :: Int -> IO TestSetup
-setupOfSize n = do
+testCaseOfSize :: Int -> IO TestCase
+testCaseOfSize n = do
   nums <- replicateM n (randomRIO (1, 10000 :: Int))
   index1 <- randomRIO (0, n -2)
   index2 <- randomRIO (index1, n -1)
-  return $ TestSetup nums ((nums !! index1) + (nums !! index2))
+  return $ TestCase nums ((nums !! index1) + (nums !! index2))
+
+setupOfSize :: Int -> IO TestSetup
+setupOfSize n = TestSetup <$> replicateM reps (testCaseOfSize n)
+  where reps = 100
 
 setups :: IO [TestSetup]
 setups = mapM setupOfSize [10, 100, 1000, 10000, 100000]
