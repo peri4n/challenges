@@ -8,3 +8,4 @@ target/
 
 # Benchmarks
 *.csv
+*.png
