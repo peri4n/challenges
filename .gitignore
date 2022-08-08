@@ -1,3 +1,5 @@
+.idea/
+
 # Haskell
 .stack-work/
 *.prof
